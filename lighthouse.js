@@ -36,3 +36,10 @@ function gridSize() {
   const size = `${width} x ${height}`;
   return size;
 }
+
+function totalCells() {
+  const width = countColumns();
+  const height = countRows();
+  const total = width * height;
+  return total;
+}
