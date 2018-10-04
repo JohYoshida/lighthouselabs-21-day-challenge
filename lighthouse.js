@@ -29,3 +29,10 @@ function countColumns() {
 
   return count;
 }
+
+function gridSize() {
+  const width = countColumns();
+  const height = countRows();
+  const size = `${width} x ${height}`;
+  return size;
+}
