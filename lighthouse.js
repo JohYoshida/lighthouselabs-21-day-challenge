@@ -18,3 +18,14 @@ function countRows() {
   });
   return count;
 }
+
+function countColumns() {
+  let count = 0;
+  const row = GRID[0];
+
+  row.forEach(column => {
+    count++;
+  });
+
+  return count;
+}
