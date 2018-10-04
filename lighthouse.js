@@ -10,3 +10,11 @@ const GRID = [
   ["", "^", "", "~", "~", "", "", "", "", ""],
   ["", "^", "", "", "~", "~", "", "", "", ""],
 ];
+
+function countRows() {
+  let count = 0;
+  GRID.forEach(row => {
+    count++;
+  });
+  return count;
+}
