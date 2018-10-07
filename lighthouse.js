@@ -43,3 +43,9 @@ function totalCells() {
   const total = width * height;
   return total;
 }
+
+function convertColumn(coord) {
+  const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  const column = coord[0];
+  return alphabet.indexOf(column);
+}
