@@ -49,3 +49,10 @@ function convertColumn(coord) {
   const column = coord[0];
   return alphabet.indexOf(column);
 }
+
+function lightCell(coord) {
+  const width = convertColumn(coord);
+  const height = coord[1] - 1;
+  const cell = GRID[height][width];
+  return cell;
+}
