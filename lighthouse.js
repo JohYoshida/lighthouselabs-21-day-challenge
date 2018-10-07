@@ -56,3 +56,12 @@ function lightCell(coord) {
   const cell = GRID[height][width];
   return cell;
 }
+
+function isRock(coord) {
+  const cell = lightCell(coord);
+  if (cell === "^") {
+    return true;
+  } else {
+    return false;
+  }
+}
