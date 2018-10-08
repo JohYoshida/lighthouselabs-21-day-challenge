@@ -65,3 +65,12 @@ function isRock(coord) {
     return false;
   }
 }
+
+function isCurrent(coord) {
+  const cell = lightCell(coord);
+  if (cell === "~") {
+    return true;
+  } else {
+    return false;
+  }
+}
