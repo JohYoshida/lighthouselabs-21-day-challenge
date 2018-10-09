@@ -74,3 +74,12 @@ function isCurrent(coord) {
     return false;
   }
 }
+
+function isShip(coord) {
+  const cell = lightCell(coord);
+  if (cell === "v") {
+    return true;
+  } else {
+    return false;
+  }
+}
