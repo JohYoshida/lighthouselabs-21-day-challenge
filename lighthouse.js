@@ -83,3 +83,11 @@ function isShip(coord) {
     return false;
   }
 }
+
+function lightRow(row) {
+  const results = [];
+  GRID[row - 1].forEach(cell => {
+    results.push((cell));
+  });
+  return results;
+}
