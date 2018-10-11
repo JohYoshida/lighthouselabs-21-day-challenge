@@ -91,3 +91,12 @@ function lightRow(row) {
   });
   return results;
 }
+
+function lightColumn(column) {
+  const results = [];
+  const col = convertColumn(column);
+  GRID.forEach(row => {
+    results.push(row[col])
+  })
+  return results;
+}
