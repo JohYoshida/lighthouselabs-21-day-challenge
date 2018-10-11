@@ -87,7 +87,7 @@ function isShip(coord) {
 function lightRow(row) {
   const results = [];
   GRID[row - 1].forEach(cell => {
-    results.push((cell));
+    results.push(cell);
   });
   return results;
 }
