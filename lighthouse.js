@@ -51,9 +51,12 @@ function convertColumn(coord) {
 }
 
 function lightCell(coord) {
-  const width = convertColumn(coord);
-  const height = coord[1] - 1;
-  const cell = GRID[height][width];
+  const gridRows = countRows();
+  const gridCols = countColumns();
+  const rows = coord.slice(1) - 1;
+  const cols = convertColumn(coord);
+  if (rows >= gridRows || cols >= gridCols) return false;
+  const cell = GRID[rows][cols];
   return cell;
 }
 
