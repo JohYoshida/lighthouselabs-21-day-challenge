@@ -31,16 +31,16 @@ function countColumns() {
 }
 
 function gridSize() {
-  const width = countColumns();
-  const height = countRows();
-  const size = `${width} x ${height}`;
+  const cols = countColumns();
+  const rows = countRows();
+  const size = `${cols} x ${rows}`;
   return size;
 }
 
 function totalCells() {
-  const width = countColumns();
-  const height = countRows();
-  const total = width * height;
+  const cols = countColumns();
+  const rows = countRows();
+  const total = cols * rows;
   return total;
 }
 
