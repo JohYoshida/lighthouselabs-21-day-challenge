@@ -103,3 +103,43 @@ function lightColumn(column) {
   })
   return results;
 }
+
+function allRocks() {
+  const results = [];
+  let row = 0;
+  let col = 0;
+  GRID.forEach(line => {
+    row++;
+    col = 0;
+    line.forEach(cell => {
+      col++;
+      if (cell === "^") {
+        const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        const alpha = alphabet[col - 1];
+        const coord = `${alpha}${row}`;
+        results.push(coord);
+      }
+    });
+  });
+  return results;
+}
+
+function allCurrents() {
+  const results = [];
+  let row = 0;
+  let col = 0;
+  GRID.forEach(line => {
+    row++;
+    col = 0;
+    line.forEach(cell => {
+      col++;
+      if (cell === "~") {
+        const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        const alpha = alphabet[col - 1];
+        const coord = `${alpha}${row}`;
+        results.push(coord);
+      }
+    });
+  });
+  return results;
+}
