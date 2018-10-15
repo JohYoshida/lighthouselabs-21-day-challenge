@@ -143,3 +143,23 @@ function allCurrents() {
   });
   return results;
 }
+
+function allShips() {
+  const results = [];
+  let row = 0;
+  let col = 0;
+  GRID.forEach(line => {
+    row++;
+    col = 0;
+    line.forEach(cell => {
+      col++;
+      if (cell === "v") {
+        const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        const alpha = alphabet[col - 1];
+        const coord = `${alpha}${row}`;
+        results.push(coord);
+      }
+    });
+  });
+  return results;
+}
