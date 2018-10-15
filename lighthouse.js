@@ -163,3 +163,8 @@ function allShips() {
   });
   return results;
 }
+
+function firstRock() {
+  const rocks = allRocks();
+  return rocks[0];
+}
