@@ -168,3 +168,8 @@ function firstRock() {
   const rocks = allRocks();
   return rocks[0];
 }
+
+function firstCurrent() {
+  const currents = allCurrents();
+  return currents[0];
+}
