@@ -173,3 +173,9 @@ function firstCurrent() {
   const currents = allCurrents();
   return currents[0];
 }
+
+function shipReport() {
+  const ships = allShips();
+  const report = [ships[0], ships[ships.length - 1]];
+  return report;
+}
