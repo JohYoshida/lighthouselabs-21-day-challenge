@@ -179,3 +179,21 @@ function shipReport() {
   const report = [ships[0], ships[ships.length - 1]];
   return report;
 }
+
+function howDangerous(coord) {
+  const cell = lightCell(coord);
+  let danger;
+  switch (cell) {
+    case "~":
+      danger = 50;
+      break;
+    case "^":
+      danger = 100;
+      break;
+    default:
+      danger = 0;
+  }
+  return danger;
+}
+
+console.log(howDangerous("E2"));
