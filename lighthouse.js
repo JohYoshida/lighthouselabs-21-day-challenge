@@ -8,7 +8,7 @@ const GRID = [
   ["", "", "", "", "", "", "", "", "", ""],
   ["", "^", "~", "~", "", "", "", "^", "", ""],
   ["", "^", "", "~", "~", "", "", "", "", ""],
-  ["", "^", "", "", "~", "~", "", "", "", ""],
+  ["", "^", "", "", "~", "~", "", "", "", ""]
 ];
 
 function countRows() {
@@ -99,8 +99,8 @@ function lightColumn(column) {
   const results = [];
   const col = convertColumn(column);
   GRID.forEach(row => {
-    results.push(row[col])
-  })
+    results.push(row[col]);
+  });
   return results;
 }
 
