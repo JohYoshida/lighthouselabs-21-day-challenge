@@ -1,3 +1,4 @@
+// Official grid
 const GRID = [
   ["", "", "", "^", "", "", "", "", "", ""],
   ["", "", "v", "", "~", "", "", "", "", ""],
@@ -10,6 +11,14 @@ const GRID = [
   ["", "^", "", "~", "~", "", "", "", "", ""],
   ["", "^", "", "", "~", "~", "", "", "", ""]
 ];
+
+// Variable size test grid
+// const GRID = [
+//   ["v", "", "", ""],
+//   ["", "", "", ""],
+//   ["", "~", "", "^"],
+//   ["", "", "~", ""]
+// ];
 
 function countRows() {
   let count = 0;
@@ -196,4 +205,11 @@ function howDangerous(coord) {
   return danger;
 }
 
-console.log(howDangerous("E2"));
+function percentageReport() {
+  const cells = countRows() * countColumns();
+  const rocks = allRocks().length;
+  const currents = allCurrents().length;
+  const percentRocks = (rocks / cells * 100).toFixed(2);
+  const percentCurrents = (currents / cells * 100).toFixed(2);
+  return [percentRocks, percentCurrents];
+}
