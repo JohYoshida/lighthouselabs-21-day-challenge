@@ -189,10 +189,19 @@ function shipReport() {
   return report;
 }
 
-function howDangerous(coord) {
-  const cell = lightCell(coord);
+function howDangerous(str) {
+  if (str.length === 2) {
+    // treat as a coord
+    let cell = lightCell(str);
+  } else cell = str;
   let danger;
   switch (cell) {
+    case "":
+      danger = 0;
+      break;
+    case "v":
+      danger = 0;
+      break;
     case "~":
       danger = 50;
       break;
@@ -200,7 +209,8 @@ function howDangerous(coord) {
       danger = 100;
       break;
     default:
-      danger = 0;
+      // malformed input
+      danger = -1;
   }
   return danger;
 }
@@ -212,4 +222,16 @@ function percentageReport() {
   const percentRocks = (rocks / cells * 100).toFixed(2);
   const percentCurrents = (currents / cells * 100).toFixed(2);
   return [percentRocks, percentCurrents];
+}
+
+function safetyReport() {
+  let report = [];
+  GRID.forEach(row => {
+    let reportRow = [];
+    row.forEach(cell => {
+      reportRow.push(howDangerous(cell));
+    });
+    report.push(reportRow);
+  });
+  return report;
 }
