@@ -235,3 +235,12 @@ function safetyReport() {
   });
   return report;
 }
+
+function calcDistance(start, end) {
+  const x1 = convertColumn(start) + 1;
+  const y1 = parseInt(start[1]);
+  const x2 = convertColumn(end) + 1;
+  const y2 = parseInt(end[1]);
+  const distance = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+  return distance.toFixed(2);
+}
